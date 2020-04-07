@@ -19,6 +19,8 @@ read input1
 apt-get install xrdp -y
 apt-get install xorgxrdp -y
 apt-get install xfce4 -y
+apt-get install xfce4-terminal -y
+
 
 sleep 3
 

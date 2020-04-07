@@ -28,3 +28,9 @@ run the script with sudo permissions: 'sudo ./xrdp_install.sh'
 
 TO ENABLE RDP SESSIONS FOR MULTIPLE USERS:
 simply copy the ~/.xsession and ~/.Xresources files into their home directories and grant them ownership over the files.
+
+BugFix: Sometimes at the end of the script, the 'service xrdp restart' command will hang because xorgrdp doesn't want to play nice. Fix this by finding the thread and killing it using htop, or:
+ps -ef | grep xrdp
+ps kill -9 <PID>
+ 
+Alternatively - restarting your workstation will resolve.

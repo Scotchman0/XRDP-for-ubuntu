@@ -42,3 +42,9 @@ sudo update-alternatives --config x-terminal-emulator
 
 (choose the new xfce4-terminal from the list).
 
+BugFix: You can't start an xfce session because you don't have X11 forwarding enabled (xfce-session fails - can't open display)
+Solution: Check the server's sshd_config (normally /etc/ssh/sshd_config), and make sure the X11Forwarding option is enabled with the line
+X11Forwarding yes
+
+
+

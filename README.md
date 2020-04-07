@@ -32,8 +32,11 @@ simply copy the ~/.xsession and ~/.Xresources files into their home directories 
 # BugFix:
 
 BugFix: Sometimes at the end of the script, the 'service xrdp restart' command will hang because xorgrdp doesn't want to play nice. Fix this by finding the thread and killing it using htop, or:
+
 ps -ef | grep xrdp
-ps kill -9 <PID>
+
+ps kill -9 (PID)
+ 
 Alternatively - restarting your workstation will resolve.
 
 Bugfix: sometimes you can't launch terminal in XFCE after you've installed XFCE

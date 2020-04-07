@@ -39,7 +39,7 @@ ps kill -9 (PID)
  
 Alternatively - restarting your workstation will resolve.
 
-Bugfix: sometimes you can't launch terminal in XFCE after you've installed XFCE
+Bugfix: sometimes you can't launch terminal in XFCE because it's looking for the gnome one.
 set the default terminal environment with:
 sudo update-alternatives --config x-terminal-emulator
 

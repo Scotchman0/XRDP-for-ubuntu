@@ -60,7 +60,8 @@ ufw allow 3389
 #ufw allow from 192.168.1.0/24 to any port 3389
 
 #restart the service for baseline updates
-service xrdp restart
+#service xrdp restart
+systemctl restart xrdp
 
 #if service restart hangs above - (sometimes it does after XORGRDP is installed) - kill the task manually with htop
 #or restart your workstation - that works too)

@@ -25,6 +25,9 @@ sleep 3
 #set XFCE as default RDP session:
 echo xfce4-session > ~/.xsession
 
+#create local session files for your resources to pull from:
+echo 'Xcursor.core: 1' > ~/.Xresources
+
 #set XRDP to start at linux boot:
 systemctl enable xrdp
 
@@ -57,8 +60,8 @@ ufw allow 3389
 #restart the service for baseline updates
 service xrdp restart
 
-#create local session files for your resources to pull from:
-echo 'Xcursor.core: 1' > ~/.Xresources
+#if service restart hangs above - (sometimes it does after XORGRDP is installed) - kill the task manually with htop
+#or restart your workstation - that works too)
 
 #check session's online:
 service status xrdp

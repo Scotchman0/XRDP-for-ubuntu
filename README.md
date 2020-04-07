@@ -9,12 +9,14 @@ You PROBABLY can adjust the .xsession file to target a different environment, bu
 
 2. This script will install xrdp and a few other xrdp dependencies and make changes to your /etc/ directory
 3. This script will place two hidden files in your home folder at: ~/.xsession and ~/.Xresources
-4. This script will open port 3389 (RDP default port) for #ALL TRAFFIC#
-(you can ammend this with a different port or only allow from specific IP addresses - I have this as a generalized script hold and work in an environment where all our traffic is protected by our global firewall) - YOU MAY NOT.
+4. This script will open port 3389 (RDP default port) for ALL TRAFFIC!!!
+
+(you can ammend this with a different port or only allow from specific IP addresses - I have this as a generalized script hold and work in an environment where all our traffic is protected by our global firewall- YOU MAY NOT - PLEASE BE CAREFUL WITH ACCESS.)
+
  > if you need help setting up your ubuntu firewall I recommend downloading and using 'gufw' which is a nice graphical User interface for the built in ubuntu firewall (ufw). 
  5. This script will enable the xrdp service to start up on boot automatically.
 
-To install and use this script:
+# To install and use this script:
 
 clone this repository with: 
 'sudo git clone https://github.com/scotchman0/XRDP-for-ubuntu' to your home folder or install directory
@@ -24,5 +26,5 @@ make the script executable with: 'sudo chmod a+x xrdp_install.sh'
 run the script with sudo permissions: 'sudo ./xrdp_install.sh'
 
 
-#TO ENABLE RDP SESSIONS FOR MULTIPLE USERS:
+TO ENABLE RDP SESSIONS FOR MULTIPLE USERS:
 simply copy the ~/.xsession and ~/.Xresources files into their home directories and grant them ownership over the files.

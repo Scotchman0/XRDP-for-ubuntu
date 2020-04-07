@@ -4,11 +4,16 @@
 #compiled from many other smarter users than I - I'm just automating it.
 
 #WARNING: THIS SOFTWARE WILL INSTALL AND CONFIGURE AN XFCE ENVIRONMENT AS PART OF THE INSTALL
+#WARNING: THIS SOFTWARE WILL OPEN TO ALL TRAFFIC PORT 3389 ON YOUR NETWORK - CHANGE THIS IF THAT'S A PROBLEM
 #PROCEED WITH CAUTION
 
+echo "did you read the readme?"
+echo "press any key to continue - otherwise press ctrl+c to cancel the script"
+sleep 1
+read input1
 
 #check for and perform updates:
-apt update && apt upgrade -y
+#apt update && apt upgrade -y
 
 #install baseline software and XFCE
 apt-get install xrdp -y
@@ -46,6 +51,8 @@ sleep 2
 
 #enable firewall rule for the default port:
 ufw allow 3389
+#comment out the above and uncomment below if you want to just allow port access on your home net:
+#ufw allow from 192.168.1.0/24 to any port 3389
 
 #restart the service for baseline updates
 service xrdp restart

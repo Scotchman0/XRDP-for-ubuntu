@@ -49,5 +49,6 @@ BugFix: You can't start an xfce session because you don't have X11 forwarding en
 Solution: Check the server's sshd_config (normally /etc/ssh/sshd_config), and make sure the X11Forwarding option is enabled with the line
 X11Forwarding yes
 
-
+BugFix: New installation seems to be acting funny or black screening on connect - manually install the following frameworks if needed. 
+> sudo apt install xserver-xorg-core && sudo apt install xsrever-xorg-input-all 
 

@@ -53,8 +53,10 @@ BugFix: New installation seems to be acting funny or black screening on connect 
 > sudo apt install xserver-xorg-core && sudo apt install xserver-xorg-input-all 
 
 BugFix: Bluescreen after login prompt --> never renders desktop (stays blue) - install the following frameworks then restart the service:
-sudo apt-get install xorg-video-abi-24 -y
-sudo apt-get install xorgxrdp-hwe-18.04 -y       #xorgrdp-hwe-20.04 for 20.04LTS users
-sudo systemctl restart xrdp
+> sudo apt-get install xorg-video-abi-24 -y
+
+> sudo apt-get install xorgxrdp-hwe-18.04 -y       #xorgrdp-hwe-20.04 for 20.04LTS users
+
+> sudo systemctl restart xrdp
 
 Drop a comment in the issues page if you've got other errors unforseen.

@@ -50,5 +50,5 @@ Solution: Check the server's sshd_config (normally /etc/ssh/sshd_config), and ma
 X11Forwarding yes
 
 BugFix: New installation seems to be acting funny or black screening on connect - manually install the following frameworks if needed. 
-> sudo apt install xserver-xorg-core && sudo apt install xsrever-xorg-input-all 
+> sudo apt install xserver-xorg-core && sudo apt install xserver-xorg-input-all 
 

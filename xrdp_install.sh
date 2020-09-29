@@ -67,7 +67,9 @@ systemctl restart xrdp
 #or restart your workstation - that works too)
 
 #check session's online:
-service --status-all | grep xrdp
-
-echo 'services available!'
+if service --status-all | grep xrdp
+  then echo "services available!"
+else 
+  echo "xrdp service not running, check wiki or restart service manually (or reboot)"
+fi
 exit 0

@@ -8,7 +8,7 @@
 #PROCEED WITH CAUTION
 
 echo "did you read the readme?"
-echo "press any key to continue - otherwise press ctrl+c to cancel the script"
+echo "press return to continue - otherwise press ctrl+c to cancel the script"
 sleep 1
 read input1
 
@@ -52,6 +52,9 @@ echo fi >> /etc/xrdp/startwm.sh
 echo startxfce4 >> /etc/xrdp/startwm.sh
 echo '' >> /etc/xrdp/startwm.sh
 
+sleep 2
+
+echo "Please be advised, port 3389 will be open to incoming connections on your system"
 sleep 2
 
 #enable firewall rule for the default port:
